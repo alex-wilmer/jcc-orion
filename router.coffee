@@ -8,11 +8,10 @@ Router.configure
         sort: 
           sortOrder: 1   
 
-Router.route '/',
-  name: 'Home'      
-
-Router.route '/home', () ->
-  this.render 'home'
+Router.route '/', () ->
+  this.render 'page',
+    data: () ->
+      orion.entities.pages.collection.findOne({sortOrder: 0})
 
 Router.route '/:title', () ->
   this.render 'page',
