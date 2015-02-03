@@ -128,16 +128,20 @@ articleAsideLayout(padding)
 
 // Title
 
-.title
-  padding-left 40px
-  +above(3)
-    display none
+.header
+  .title
+    padding-left 40px
+    +above(3)
+      display none
     
 // Navigation
 
 .nav-icon
   float left
-  
+  user-select none
+  -webkit-tap-highlight-color rgba(0,0,0,0)
+  -webkit-tap-highlight-color transparent /* For some Androids */  
+
 .nav-icon + .title
   width 200px
 
@@ -197,7 +201,7 @@ articleAsideLayout(msinPadding)
 // Colors / Spec
 
 body
-  background-color black
+  background-color #000
   
 #orion-admin,  
 .wrapper
@@ -215,6 +219,10 @@ body
     text-decoration none
   a:hover
     background green
+    
+.right-aside
+  color silver
+  line-height 1.2    
     
 article
   color white

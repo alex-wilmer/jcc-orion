@@ -11,7 +11,7 @@ Router.configure
 Router.route '/', () ->
   this.render 'page',
     data: () ->
-      orion.entities.pages.collection.findOne({sortOrder: 0})
+      orion.entities.pages.collection.findOne {sortOrder: 1}
 
 Router.route '/:title', () ->
   this.render 'page',
