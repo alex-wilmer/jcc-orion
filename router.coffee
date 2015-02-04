@@ -1,12 +1,17 @@
 Router.configure
   layoutTemplate: 'layout'
   waitOn: () ->
-    orion.subs.subscribe 'entity', 'pages'
+    [orion.subs.subscribe 'entity', 'pages',
+     orion.subs.subscribe 'entity', 'guests']
   data: () ->
     pages: 
       orion.entities.pages.collection.find {}, 
         sort: 
-          sortOrder: 1   
+          sortOrder: 1
+    guests:
+      orion.entities.guests.collection.find {},
+        sort:
+          name: 1 
 
 Router.route '/', () ->
   this.render 'page',

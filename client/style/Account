@@ -1,0 +1,59 @@
+Identity
+  first name: String
+  last name: String
+  address: String
+
+Account
+  owner: Identity
+  phone number: String
+  airtime: Seconds
+  long d airtime
+  international airtime
+  balance: Number
+  payments: [Payment]
+  refunds: [Refund]
+  bills: [Bill]
+
+Bill
+  time: Date
+  customer: Account
+  balance: Number
+  phone calls: [Bill Phone Call]
+
+Phone Call
+  start-time: Date
+  account: Account
+  other phone number: String
+  duration: Seconds
+  incoming: Boolean  
+
+Bill Phone Call extends Phone Call
+  location: 
+  airtime charge:
+  long distance charge: 
+
+global variables:
+  monthly access fee
+  tax
+  long distance rate
+  international rate
+
+The billing system needs template(name='name')o be aware of these two,
+but does not need to handle their execution:
+
+Payment
+  time: Date
+  from: Account
+  amount: Number | currency
+
+Refund
+  time: Date
+  to; Account
+  amount: Number | currency
+
+
+
+
+
+
+ 
