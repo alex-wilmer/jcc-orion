@@ -14,3 +14,4 @@ coffeescript
 orionjs:filesystem
 orionjs:summernote
 orionjs:froala-editor
+sacha:spin

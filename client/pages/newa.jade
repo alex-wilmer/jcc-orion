@@ -1,0 +1,9 @@
+template(name='news')
+  .post
+    +each articles
+      .article
+        h2
+          b #{headline}
+          .description {{{description}}}
+        h5
+          .date #{date}

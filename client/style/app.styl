@@ -15,6 +15,9 @@ a
 h1
   font-size 3em
   
+h2
+  font-size 2em
+  
 h5
   color silver
   font-size 0.8em
@@ -57,7 +60,7 @@ headerFooterLayout(headerHeight, footerHeight)
     
     .header   
       position fixed
-      z-index 1
+      z-index 100
       row(headerHeight)
       +above(3)
         .nav-icon
@@ -100,6 +103,7 @@ articleAsideLayout(padding)
   .left-aside
     span(1/5)
     height 100%
+    z-index 100
     a
       display block
       line-height 40px
@@ -278,3 +282,14 @@ article
 // .footer
 //   background #333
 //   color white
+
+// Orion
+
+.admin-content:after
+  content ''
+  display block
+  clear both
+  
+.froala-element  
+  min-height 250px
+
