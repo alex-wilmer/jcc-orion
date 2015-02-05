@@ -20,6 +20,9 @@ h2
   
 h3
   font-size 1.5em
+  
+h4
+  font-size 1.2em
 
 h5
   color silver
@@ -92,6 +95,7 @@ articleAsideLayout(padding)
     
   article
     height 100%
+    min-height 1px
     +above(4)
       span(5/6)
     +below(2)
@@ -265,6 +269,9 @@ article
   a
     text-decoration none
     color green
+    
+  .article + .article
+    margin-top 25px
 
 .details-panel
   img

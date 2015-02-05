@@ -34,4 +34,4 @@ Router.route '/:title', () ->
 
   this.render 'page',
     data: () ->
-      orion.entities.pages.collection.findOne {title: this.params.title} 
+      orion.entities.pages.collection.findOne {title: this.params.title}
