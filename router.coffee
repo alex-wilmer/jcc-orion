@@ -8,30 +8,35 @@ Router.configure
      orion.subs.subscribe 'entity', 'articles']
 
   data: () ->
-    pages: 
-      orion.entities.pages.collection.find {}, 
-        sort: 
+    pages:
+      orion.entities.pages.collection.find {},
+        sort:
           sortOrder: 1
 
     guests:
       orion.entities.guests.collection.find {},
         sort:
-          name: 1 
-
-    articles:
-      orion.entities.articles.collection.find {},
-        sort:
-          date: -1
+          name: 1
 
 Router.route '/', () ->
   this.render 'page',
     data: () ->
-      orion.entities.pages.collection.findOne {sortOrder: 1}
+      page: orion.entities.pages.collection.findOne {sortOrder: 1}
 
 Router.route '/:title', () ->
   if this.params.title == 'News'
-    return this.render 'news'
+    return this.render 'news',
+      data: () ->
+        articles:
+          orion.entities.articles.collection.find {},
+            sort:
+              date: -1
 
   this.render 'page',
     data: () ->
-      orion.entities.pages.collection.findOne {title: this.params.title}
+      page: orion.entities.pages.collection.findOne {title: this.params.title}
+
+      articles:
+        orion.entities.articles.collection.find {},
+          sort:
+            date: -1

@@ -1,6 +1,8 @@
 template(name='page')
   .post 
-    {{{body}}}
+    | {{{page.body}}}
+  
+  .news  
     +each articles
       .article
         h2
