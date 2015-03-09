@@ -11,7 +11,5 @@ orionjs:styles
 mquandalle:jade
 cryptoquick:stylus-multi
 coffeescript
-orionjs:filesystem
-orionjs:summernote
 orionjs:froala-editor
 sacha:spin
