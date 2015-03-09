@@ -1,2 +1,11 @@
 template(name='page')
-  .post {{{body}}}
+  .post 
+    {{{body}}}
+    +each articles
+      .article
+        h2
+          b #{headline}
+        h4
+          .description {{{description}}}
+        h5
+          .date #{date}

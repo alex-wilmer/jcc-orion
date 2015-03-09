@@ -1,0 +1,20 @@
+<template name='rightAside'>
+  <aside class="right-aside">
+
+    <h5> Proceeds to benefit</h5>
+    <img src='http://joecarterclassic.com/images/JC_T2_home_03_CAF_logo.png'>
+    <h5> Our Sponsors</h5>
+    <img src='http://joecarterclassic.com/images/JC_T2_home_04.gif'>
+    <h5> Celebrity Guests</h5>
+    {{> guests}}
+
+<!--STILL TESTING, trying to get the twitter feed to take up all the vertical space on the right-->
+    <div data-twttr-id="twttr-sandbox-0">
+
+    <a class="twitter-timeline" width="200" height="600" href="https://JoeCarterGolf" data-widget-id="345581910870851584">Tweets by </a>
+    </div>
+
+</aside>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</template>
